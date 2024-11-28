@@ -45,7 +45,7 @@ class MyWritableStream extends Writable {
             this.processing = false;
             console.log(`Processed: ${chunk.toString().trim()}`);
             callback();
-        }, 100);
+        }, 500);
     }
 }
 

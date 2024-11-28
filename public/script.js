@@ -9,6 +9,7 @@ document.getElementById('startStream').addEventListener('click', () => {
             const decoder = new TextDecoder("utf-8");
             let counter = 0;
             let chunksCount = 0;
+            let chunksSent = 0;
             let stopSignalsCount = 0;
 
             function read() {
@@ -26,6 +27,8 @@ document.getElementById('startStream').addEventListener('click', () => {
                             const img = document.createElement("img");
                             img.setAttribute('src', 'https://cdn.icon-icons.com/icons2/1465/PNG/512/724package_100522.png');
                             img.setAttribute('height', 100);
+                            chunksSent++;
+                            document.querySelector('.chunks__sent').innerHTML = `Consumed chunks: ${chunksSent}`
 
                             document.querySelector('.packages__delivered').appendChild(img);
                         }
