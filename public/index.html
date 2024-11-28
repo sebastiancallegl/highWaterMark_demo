@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighWaterMark Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>HighWaterMark Visualization</h1>
+    <label for="hwm">Chunks quantity:</label>
+    <input type="number" id="cq" value="10" min="10" max="10000">
+    <label for="hwm">Set chunk size: (bytes)</label>
+    <input type="number" id="cs" value="1" min="1" max="1000">
+    <label for="hwm">Set HighWaterMark:</label>
+    <input type="number" id="hwm" value="1" min="1" max="1000">
+    <button id="startStream">Start Stream</button>
+    <h3 class="stop__signals">stop signals: 0</h3>
+    <div class="streams__display">
+        <div class="readable__stream">
+            <h1>Readable</h1>
+            <h1>Stream</h1>            
+        </div>
+        <div class="packages__display">
+            <div class="packages__delivered"></div>            
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/3634/3634202.png" alt="" height="100">
+            </div>
+            <div class="packages__processed"></div>
+        </div>
+        <div class="writable__stream">
+            <h1>Writable</h1>
+            <h1>Stream</h1>
+            <h3 class="chunks__count">chunks count: 0</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
